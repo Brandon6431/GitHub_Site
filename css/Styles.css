@@ -74,6 +74,17 @@ li:hover{
 }
 /*nav end*/
 
+/*drawer nav*/
+.drawer-nav {
+  display: none;
+}
+
+.drawer-nav.opened {
+  display: block;
+}
+
+/*drawer nave end*/
+
 /*hero section*/
 .banner{
     position: relative;
@@ -306,6 +317,52 @@ li:hover{
   width: 100%;
   height: auto;
 }
+
+/*new*/
+.container { 
+  position: relative; 
+  display: inline-block; /* or block/width-specific */ 
+} 
+.container img { 
+  display: block; 
+  width: 300px; /* example */ 
+  height: auto; 
+} 
+.container .caption { 
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;                /* change to top:0 for top overlay */ 
+  background: rgba(0,0,0,0.6); 
+  color: #fff; 
+  padding: 8px 12px; 
+  opacity: 0; 
+  transform: translateY(6px); 
+  transition: opacity 180ms ease, transform 180ms ease; 
+  pointer-events: none;     /* lets clicks pass to image */ 
+} 
+.container:hover .caption, 
+.container:focus-within .caption { 
+  opacity: 1; 
+  transform: translateY(0); 
+  pointer-events: auto; 
+} 
+
+.tooltip { 
+  position: fixed; 
+  z-index: 9999; 
+  background: rgba(0,0,0,0.85); 
+  color: #fff; 
+  padding: 6px 8px; 
+  border-radius: 4px; 
+  font-size: 13px; 
+  pointer-events: none; 
+  transform: translate(-50%, -120%); 
+  transition: opacity 120ms ease; 
+  opacity: 0; 
+} 
+.tooltip.visible { opacity: 1; } 
+/*new*/
 
 /* ========================= */
 /* SMALLER MOBILE ADJUSTMENTS */
